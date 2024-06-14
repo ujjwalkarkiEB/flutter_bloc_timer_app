@@ -1,4 +1,4 @@
-part of 'timer_bloc.dart';
+part of 'timer_cubit.dart';
 
 sealed class TimerState extends Equatable {
   final int duration;
@@ -28,7 +28,7 @@ final class TimerRunPause extends TimerState {
 
 // to reset the timer
 final class TimerRunComplete extends TimerState {
-  const TimerRunComplete() : super(0);
+  const TimerRunComplete(super.duration);
   @override
   String toString() => 'TimerRunComplete { duration: $duration }';
 }
